@@ -10,6 +10,9 @@ persist.vendor.bluetooth.modem_nv_support=true
 
 # Camera
 ro.hardware.camera=oemlayer
+oplus.camera.packname=com.oplus.camera
+oplus.camera.activityname=com.oplus.camera
+ro.oplus.system.camera.name=com.oplus.camera
 
 # Radio
 persist.vendor.radio.force_on_dc=true
