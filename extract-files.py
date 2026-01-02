@@ -92,6 +92,8 @@ blob_fixups: blob_fixups_user_type = {
         ),
     'vendor/etc/pwr/PowerFeatureConfig.xml': blob_fixup()
         .regex_replace(r'(<Name>GamePowerOptFeature</Name>\s*<Enable>)0(<\/Enable>)', r'\g<1>1\g<2>'),
+    'vendor/etc/init/vendor.qti.camera.provider-service_64.rc': blob_fixup()
+        .regex_replace(r'^(.*\n){5}', '\\1    setenv JE_MALLOC_ZERO_FILLING 1\n'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libbinder_shim.so')
         .add_needed('libhidlbase_shim.so'),
